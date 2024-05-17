@@ -1,0 +1,31 @@
+/* .reset-btn{
+    background-color: #E7F2FF;
+    color:#5373E7 ;
+}
+.reset-btn:hover{
+    background-color: #E7F2FF;
+    color:#5373E7 ;
+} */
+.save-btn{
+    color: #E7F2FF;
+    background-color:#5373E7 ;
+}
+.save-btn:hover{
+    color: #E7F2FF;
+    background-color:#5373E7 ;
+}
+.change{
+    color:#5373E7 ; 
+    cursor: pointer;
+    background-color: transparent;
+}
+/* .profile-picture-input {
+    display: none;
+  } */
+  .over{
+    width: 84%;
+  }
+  .profile-picture{
+    width: 30%;
+    /* border-radius: 80%; */
+  }

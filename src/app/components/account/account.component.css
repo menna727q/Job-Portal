@@ -1,0 +1,27 @@
+.withp{
+    color: #5373E7;
+    font-family: 'Varien Font', sans-serif;
+}
+h3{
+    font-family: 'Varien Font', sans-serif;
+    color: #5373E7;
+    
+}
+h6{
+    font-family: 'Varien Font', sans-serif;
+
+}
+.content2{
+    height: 577px;
+}
+.texttt {
+    flex-grow: 1;
+  }
+  .image1{
+    border: 1px solid #D7DBDF;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .image{
+    margin-left: -160px;
+  }

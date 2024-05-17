@@ -1,0 +1,40 @@
+<!-- <app-navbar-company></app-navbar-company> -->
+<div class="container bg-white mt-4 rounded-3">
+   <div class="row p-5 d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+        <input type="text" name="jobName" [placeholder]="jobDetail.jobName" [(ngModel)]="formData.jobName" id="jobType"  class="form-control mb-2">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="jobsalary" [placeholder]="jobDetail.salary" [(ngModel)]="formData.salary" id="jobsalary" class="form-control mb-2">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="joblocation" 
+        [placeholder]="jobDetail.location" 
+        [(ngModel)]="formData.location" 
+        id="joblocation"
+        class="form-control ">
+    </div>
+    <div class="col-md-6">
+        <p-dropdown
+        name="jobType"
+        formControlName="jobType"
+        class="child "
+        [options]="jobType"
+        optionLabel="jobtype"
+        [showClear]="true"
+        [placeholder]="jobDetail.jobType" [(ngModel)]="formData.jobType"
+      ></p-dropdown>    </div>
+      <div class="col-md-12 mt-3">
+        <textarea name="description" id="description" rows="5" [placeholder]="jobDetail.job_description" [(ngModel)]="formData.description" class="form-control"></textarea>
+      </div>
+      <div class="col-md-12 mt-3">
+        <textarea name="qualification" id="qualification" rows="5"  [placeholder]="jobDetail.qualification" [(ngModel)]="formData.qualification" class="form-control"></textarea>
+      </div>
+     <div class="buttons d-flex justify-content-center">
+        <!-- <button class=" btn mt-3 width reset me-2">Reset </button> -->
+        <button class=" btn mt-3 width " (click)="updatePost()">Save Post</button>
+     </div>
+
+   </div>
+   
+</div>

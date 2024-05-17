@@ -1,0 +1,43 @@
+<!-- <app-navbar-company></app-navbar-company> -->
+
+<div class="profile">
+    <div class="container bg-white mt-5 rounded-4 p-3">
+        <div class="acc p-3 d-flex justify-content-between">
+            <h6 >Account Details</h6>
+             <button class="btn" routerLink='/company/edit'> Edit</button>
+        </div>
+        <div class="header d-flex flex-row  align-items-center p-2">
+            <!-- <div class="image  ">
+                <img [src]="companyData.profilePicture?? userFrame" class="w-25 rounded-circle" alt="">
+            </div> -->
+            <img [src]="companyData.profilePicture?? userFrame" class="image rounded-circle me-3" alt="">
+
+            <div class="text">
+               <p class="fw-bolder">{{companyData.name}}</p>
+               <p class="fw-medium">{{companyData.industry}}</p>
+               <p class="degree">{{companyData.address.city}} </p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="email mb-2 ">
+                <i class="pi pi-envelope me-3"></i>
+                <a>{{companyData.email}}</a>
+            </div>
+            <div class="phone mb-2 ">
+                <i class="pi pi-phone me-3"></i>
+                <a>{{companyData.phoneNumber}}</a>
+            </div>
+            <div class="file mb-2 ">
+                <i class="pi pi-send me-3"></i>
+                <a>{{companyData.website}}</a>
+            </div>
+            <div class="parag d-flex">
+                <i class="pi pi-align-left me-3"></i>
+               <p> {{companyData.description}} </p>
+            </div>
+        </div>
+
+    </div>
+   
+</div>
+<app-footer></app-footer>

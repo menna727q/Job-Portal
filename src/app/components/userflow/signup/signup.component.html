@@ -1,0 +1,176 @@
+
+
+<div class="container back d-flex justify-content-between align-items-center ">
+    <div class="col-md-6  ">
+       <div class="bg-white rounded-5 p-3 fixedle">
+         <div class="header">
+            <p class="withp fs-3">Wovac</p>
+         </div>
+         <div class="contenttt p-4 d-flex justify-content-center  flex-column">
+          <div class="switch  d-flex justify-content-evenly  mb-4 position-relative ">
+            <div class="sign"><h6>Sign up</h6></div>
+          </div>
+            <form class="ms-5" [formGroup]="SignupForm" (ngSubmit)="submitSignupForm()" >
+              <div class="mb-2">
+                <input type="text" formControlName="firstName" class="form-control " placeholder="Enter your First Name">
+                <div class="alert alert-danger mt-2" [hidden]="firstName?.valid || firstName?.untouched">
+                  <small *ngIf="firstName?.errors?.['required']">First Name is required</small>
+                </div>
+              </div>
+              <div class="mb-2 ">
+                <input type="text" formControlName="lastName" class="form-control " placeholder="Enter your Last Name">
+                <div class="alert alert-danger mt-2" [hidden]="lastName?.valid || lastName?.untouched">
+                  <small *ngIf="lastName?.errors?.['required']">Last Name is required</small>
+                </div>
+              </div>
+              <div class="mb-2 ">
+                <div class="input-group ">
+                  <select formControlName="gender" id="gender" class="form-control">
+                    <option value="" disabled selected>Choose your gender:</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div class="alert alert-danger mt-2" [hidden]="gender?.valid || gender?.untouched">
+                  <small *ngIf="gender?.errors?.['required']">Gender is required</small>
+                </div>
+              </div>
+              <div class="mb-2 ">
+                <input type="email" formControlName="emailsignup" class="form-control" placeholder="Enter your Email">
+                <div class="alert alert-danger w-75 mt-2" [hidden]="emailsignup?.valid || emailsignup?.untouched">
+                  <small *ngIf="emailsignup?.errors?.['required']">Email is required</small>
+                  <small *ngIf="emailsignup?.errors?.['pattern']">Invalid email format</small>
+                </div>
+              </div>
+              
+              <div class="mb-2 ">
+                <input type="tel" formControlName="phoneNumber" class="form-control" placeholder="Enter your Phone Number">
+                <div class="alert alert-danger mt-2" [hidden]="phoneNumber?.valid || phoneNumber?.untouched">
+                  <small *ngIf="phoneNumber?.errors?.['required']">Phone Number is required</small>
+                </div>
+              </div>
+              <div class="mb-2 ">
+                <div class="input-group  d-flex justify-content-between">
+                  <input [type]="showPassword ? 'text' : 'password'" formControlName="password_signup" id="exampleFormControlTextarea1"
+                    class="form-control" placeholder="Enter your password">
+                  <span class="input-group-text" (click)="togglePasswordVisibility()">
+                    <i [class]="showPassword ? 'pi ' + eyeIcon: 'pi ' + eyeSlashIcon"></i>
+                  </span>
+                </div>
+                <div class="alert alert-danger w-75 mt-2" [hidden]="password_signup?.valid || password_signup?.untouched">
+                  <small *ngIf="password_signup?.errors?.['required']">Password is required</small>
+                  <small *ngIf="password_signup?.errors?.['minlength']">Password should be at least 8 characters long</small>
+                  <small *ngIf="password_signup?.errors?.['maxlength']">Password should not exceed 20 characters</small>
+                </div>
+              </div>
+                <div class="mb-3  ">
+                    <input type="text" class="form-control form  w-100"  formControlName="jobTitle" id="job" placeholder="Enter your job Title: ">
+                  </div>
+                  <div class="mb-3 ">
+                    <input type="text"  id="education" formControlName="education" class="form-control w-100"
+                      placeholder="Enter your heighest education :">
+                  </div>
+                  <div class="mb-3 ">
+                    <textarea name="" class="form-control  w-100" cols="8" rows="4" formControlName="overview" id="overview" placeholder='Write an overview about yourself:' ></textarea>
+                  </div>
+                <!-- signup.component.html -->
+              <div class="mb-3">
+                 <button class="btn w-75 ms-5 custom-button" (click)="selectResume()">Upload Resume</button>
+                 <input  #fileInput hidden type="file"
+                       class="form-control w-75"
+                       id="resume"
+                       formControlName="resume"
+                      (change)="handleFileUpload($event)"
+                      name="resume"/>
+               </div>
+                  <button type="submit" class="btn w-75 ms-5 " (click)="navigateToSignin()">Signup</button>
+                  <p class="ms-5">Already have an account? <a class="text-decoration-none" routerLink="/user/signin">Signin</a></p>
+              </form>
+         </div>
+       </div>
+    </div>
+    <div class="col-md-6 p-3">
+       <div class="content">
+         <img [src]="imageSource" class="w-100" alt="">
+       </div>
+    </div>
+ </div>
+ 
+ 
+
+<!-- <div class="container back d-flex justify-content-between align-items-center " > 
+  
+  <div class="col-md-6 mt-2 me-3 ">
+       <div class=" bg-white rounded-4  d-flex flex-column align-items-center ">
+       
+         <div class="texttt">
+         
+          <form  [formGroup]="SignupForm" (ngSubmit)="submitSignupForm()" class="d-flex justify-content-center   flex-column">
+            <div class="mb-2 ms-5">
+              <input type="text" formControlName="firstName" class="form-control " placeholder="Enter your First Name">
+              <div class="alert alert-danger mt-2" [hidden]="firstName?.valid || firstName?.untouched">
+                <small *ngIf="firstName?.errors?.['required']">First Name is required</small>
+              </div>
+            </div>
+            <div class="mb-2 ms-5">
+              <input type="text" formControlName="lastName" class="form-control " placeholder="Enter your Last Name">
+              <div class="alert alert-danger mt-2" [hidden]="lastName?.valid || lastName?.untouched">
+                <small *ngIf="lastName?.errors?.['required']">Last Name is required</small>
+              </div>
+            </div>
+            <div class="mb-2 ms-5">
+              <div class="input-group ">
+                <select formControlName="gender" id="gender" class="form-control">
+                  <option value="" disabled selected>Choose your gender:</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="alert alert-danger mt-2" [hidden]="gender?.valid || gender?.untouched">
+                <small *ngIf="gender?.errors?.['required']">Gender is required</small>
+              </div>
+            </div>
+            <div class="mb-2 ms-5">
+              <input type="email" formControlName="emailsignup" class="form-control" placeholder="Enter your Email">
+              <div class="alert alert-danger w-75 mt-2" [hidden]="emailsignup?.valid || emailsignup?.untouched">
+                <small *ngIf="emailsignup?.errors?.['required']">Email is required</small>
+                <small *ngIf="emailsignup?.errors?.['pattern']">Invalid email format</small>
+              </div>
+            </div>
+            
+            <div class="mb-2 ms-5">
+              <input type="tel" formControlName="phoneNumber" class="form-control" placeholder="Enter your Phone Number">
+              <div class="alert alert-danger mt-2" [hidden]="phoneNumber?.valid || phoneNumber?.untouched">
+                <small *ngIf="phoneNumber?.errors?.['required']">Phone Number is required</small>
+              </div>
+            </div>
+            <div class="mb-2 ms-5">
+              <div class="input-group  d-flex justify-content-between">
+                <input [type]="showPassword ? 'text' : 'password'" formControlName="password_signup" id="exampleFormControlTextarea1"
+                  class="form-control" placeholder="Enter your password">
+                <span class="input-group-text" (click)="togglePasswordVisibility()">
+                  <i [class]="showPassword ? 'pi ' + eyeIcon: 'pi ' + eyeSlashIcon"></i>
+                </span>
+              </div>
+              <div class="alert alert-danger w-75 mt-2" [hidden]="password_signup?.valid || password_signup?.untouched">
+                <small *ngIf="password_signup?.errors?.['required']">Password is required</small>
+                <small *ngIf="password_signup?.errors?.['minlength']">Password should be at least 8 characters long</small>
+                <small *ngIf="password_signup?.errors?.['maxlength']">Password should not exceed 20 characters</small>
+              </div>
+            </div>
+            <button type="submit" [disabled]="SignupForm.invalid" class="btn btn-primary w-50 mt-1 ms-5" routerLink="/signup"> Continue</button>
+          </form>
+       </div>
+       <div class=" me-auto frameOf-image">
+            <img [src]="frameOf" class="w-100  " alt="">
+          </div>       
+       </div>
+    </div>
+    <div class="col-md-6 p-3">
+       <div class="content">
+         <img [src]="imageSource" class="w-100" alt="">
+       </div>
+    </div>
+ </div>
+  -->
+ 

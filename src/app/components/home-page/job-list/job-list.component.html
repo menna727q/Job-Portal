@@ -1,0 +1,67 @@
+
+<div class="container" >
+  <div class="row">
+    <div class="col-md-4" *ngFor="let job of joblist">
+      <div class="card bg-white mb-2 p-1"  >
+        <div class="header d-flex justify-content-between">
+          <div class="content d-flex p-2">
+            <div class="image me-1">
+              <img [src]="logo" alt="">
+            </div>
+            <div class="head" [routerLink]="['/job-detail/' + job.job_id]">
+              <h4>{{job.jobName}} </h4>
+               <p>{{job.companyName}}</p>
+               <p>{{job.location}}</p>
+            </div>
+          </div>
+          <div class="icon p-3"  >
+            <!-- <i [class]="showSaved ? bookmarkIcon : bookmarkfilledIcon" (click)="saveJob(job.job_id)"></i> -->
+            <i [class]="showSaved ? 'pi pi-bookmark': 'pi pi-bookmark-fill'" (click)="saveJob(job.job_id)" ></i>
+
+          </div>
+          
+        </div>
+        <div class="content2">
+          <div class="smallCards mt-3 p-2">
+            <span class="me-3 rounded-3 p-1">{{job.jobType}}</span>
+            <span class="me-3 p-1 rounded-3">{{job.status}}</span>
+            <span class="p-1 rounded-3">{{job.salary}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- mafrood henna lama tdose 3la card ywdekke 3la page tanya feha al details -->
+<!-- <div class="card-list">
+  <div *ngFor="let job of joblist">
+    <a [routerLink]="['/job-detail/', job.job_id]" class="card-link">
+      <p-card
+        class="card"
+        header="{{ job.companyName }}"
+        [style]="{ width: '360px' }"
+        [subheader]="job.location"
+      >
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="https://primefaces.org/cdn/primeng/images/usercard.png"
+          />
+        </ng-template>
+         <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
+        quas!
+    </p> 
+        <h3>{{ job.jobName }}</h3>
+        <ng-template pTemplate="footer">
+           <p-button label="Save" icon="pi pi-check"></p-button>
+        <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+          <div class="details">
+            <p class="card-prop">{{ job.jobName }}</p>
+            <p class="card-prop">{{ job.salary }}</p>
+            <p class="card-prop">{{ job.jobType }}</p>
+          </div>
+        </ng-template>
+      </p-card>
+    </a>
+  </div>
+</div> -->

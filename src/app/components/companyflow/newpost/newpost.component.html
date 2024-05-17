@@ -1,0 +1,32 @@
+<!-- <app-navbar-company></app-navbar-company> -->
+<div class="container bg-white mt-4 rounded-3">
+   <div class="row p-5 d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+        <input type="text" name="jobName" id="jobType" placeholder="Enter your job type:" class="form-control mb-2" [(ngModel)]="formData.jobName">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="jobsalary" id="jobsalary" placeholder="Enter your job salary:"class="form-control mb-2"[(ngModel)]="formData.salary">
+    </div>
+    <div class="col-md-6">
+        <input type="text" name="joblocation"  id="joblocation" placeholder="Enter your job location:"class="form-control "[(ngModel)]="formData.location">
+    </div>
+    <div class="col-md-6">
+        <p-dropdown
+        [(ngModel)]="formData.jobType"
+        class="child "
+        [options]="jobType"
+        optionLabel="jobtype"
+        [showClear]="true"
+        placeholder="Select the Job Type"
+      ></p-dropdown>    </div>
+      <div class="col-md-12 mt-3">
+        <textarea name="description" [(ngModel)]="formData.job_description"  id="description" rows="5" placeholder="Write the job description" class="form-control"></textarea>
+      </div>
+      <div class="col-md-12 mt-3">
+        <textarea name="qualification" [(ngModel)]="formData.qualification" id="qualification" rows="5" placeholder="Write the job qualifications" class="form-control"></textarea>
+      </div>
+      <button class=" btn mt-3 width " (click)="submitJobPost()">Post Job</button>
+
+   </div>
+   
+</div>

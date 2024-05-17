@@ -1,0 +1,25 @@
+
+.withp{
+    color: #5373E7;
+    font-family: 'Varien Font', sans-serif;
+}
+h1{
+    font-family: 'Varien Font', sans-serif;
+    color: #5373E7;
+    font-size: 60px;
+}
+.content2{
+    height: 575px;
+}
+.texttt{
+    margin-top: 40px;
+}
+.btn{
+    background-color:   #5373E7;
+    color: white;
+}
+.btn:hover {
+    color: white;
+    background-color:  #5373E7;;
+    border-color: var(--bs-btn-hover-border-color);
+}

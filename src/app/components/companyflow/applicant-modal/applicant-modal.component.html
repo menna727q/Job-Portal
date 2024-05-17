@@ -1,0 +1,39 @@
+<div class="modal-background">
+   <div class="modal-card  ">
+    <div class="dd-icon d-flex justify-content-between">
+        <div class="d-icon d-flex">
+            <div class="image me-1">
+                <img [src]="picture" alt="">
+            </div>
+          <div class="modal-content">
+            <!-- Add applicant details here -->
+            <h4>{{ applicant.firstName }} {{applicant.lastName}}</h4>
+            <p>{{ applicant.jobTitle }}</p>
+            <p>{{ applicant.location }}</p>
+            <!-- Add more details as needed -->
+          </div>
+        </div>
+        <div class="icon ms-5" (click)="onCloseModal()">
+            <i class="pi pi-times"></i>
+        </div>
+    </div>
+    <div class="content">
+        <div class="email">
+            <i class="pi pi-envelope"></i>
+            <a class="ms-1">{{applicant.email}}</a>
+        </div>
+        <div class="phone">
+            <i class="pi pi-phone"></i>
+            <a class="ms-1">{{applicant.phoneNumber}}</a>
+        </div>
+        <div class="file">
+            <i class="pi pi-file"></i>
+            <a class="ms-1">{{ applicant.firstName }} {{applicant.lastName}}.CV.pdf</a>
+        </div>
+        <div class="para d-flex mt-2">
+            <i class="pi pi-align-left"></i>
+            <p class="">{{applicant.overview }}</p>
+        </div>
+    </div>
+   </div>
+  </div>

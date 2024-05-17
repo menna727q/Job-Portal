@@ -1,0 +1,12 @@
+<app-navbar *ngIf="this.authService.isLoggedIn&&this.authService.isCompany===false"></app-navbar>
+<app-navbar-company *ngIf="this.authService.isLoggedIn && this.authService.isCompany"></app-navbar-company>
+<router-outlet></router-outlet>
+
+<div class="container">
+  <!-- <app-nav-bar *ngIf="signed==true"></app-nav-bar> -->
+  <!-- <router-outlet></router-outlet> -->
+   <!-- <app-profile></app-profile> -->
+</div> 
+<!-- <app-footer *ngIf="this.authService.isLoggedIn && this.authService.isCompany"></app-footer> -->
+
+<!-- <router-outlet></router-outlet> -->

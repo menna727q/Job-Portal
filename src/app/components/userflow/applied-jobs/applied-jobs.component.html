@@ -1,0 +1,112 @@
+<!-- <app-navbar></app-navbar> -->
+
+<div class="applied container mt-5">
+    <h5>Applied Jobs</h5>
+       <div class="row">
+        <div class="col-md-4 " *ngFor="let applied of appliedJobsList">
+          <p class="time">24 March 2024</p>
+          <div class="card bg-white rounded-3" [routerLink]="['/job-detail/' + applied.job_id]">
+            <div class="header d-flex justify-content-between p-2">
+              <div class="image">
+                <img [src]="logo" class="w-100" alt="">
+              </div>
+              <div class="content2">
+                <h6>{{applied.jobName}}</h6>
+                <!-- <p>Company name</p> -->
+                <span>{{applied.location}}</span>
+              </div>
+              <div class="icon me-5">
+                <i class="pi pi-bookmark"></i>  
+              </div>
+            </div>
+            <div class="cardContent">
+              <div class="smallCards mt-3 p-2">
+                <span class="me-3 rounded-3 p-1">{{applied.jobType}}</span>
+                <span class="me-3 p-1 rounded-3">{{applied.status}}</span>
+                <span class="p-1 rounded-3">{{applied.salary}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       
+      </div>
+      <hr>
+      <!-- <p class="time">24 March 2024</p>
+      <div class="row">
+        <div class="col-md-4 ">
+          <div class="card bg-white rounded-3">
+            <div class="header d-flex justify-content-between p-2">
+              <div class="image">
+                <img [src]="logo" class="w-100" alt="">
+              </div>
+              <div class="content2">
+                <h6>Product Designer</h6>
+                <p>Company name</p>
+                <span>Cairo, Egypt</span>
+              </div>
+              <div class="icon me-5">
+                <i class="pi pi-bookmark"></i>  
+              </div>
+            </div>
+            <div class="cardContent">
+              <div class="smallCards mt-3 p-2">
+                <span class="me-3 rounded-3 p-1">Full Time</span>
+                <span class="me-3 p-1 rounded-3">Remote</span>
+                <span class="p-1 rounded-3">Salary Egypt/year</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-white rounded-3">
+              <div class="header d-flex justify-content-between p-2">
+                <div class="image">
+                  <img [src]="logo" class="w-100" alt="">
+                </div>
+                <div class="content2">
+                  <h6>Product Designer</h6>
+                  <p>Company name</p>
+                  <span>Cairo, Egypt</span>
+                </div>
+                <div class="icon me-5">
+                  <i class="pi pi-bookmark"></i>  
+                </div>
+              </div>
+              <div class="cardContent">
+                <div class="smallCards mt-3 p-2">
+                  <span class="me-3 rounded-3 p-1">Full Time</span>
+                  <span class="me-3 p-1 rounded-3">Remote</span>
+                  <span class="p-1 rounded-3">Salary Egypt/year</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-white rounded-3">
+              <div class="header d-flex justify-content-between p-2">
+                <div class="image">
+                  <img [src]="logo" class="w-100" alt="">
+                </div>
+                <div class="content2">
+                  <h6>Product Designer</h6>
+                  <p>Company name</p>
+                  <span>Cairo, Egypt</span>
+                </div>
+                <div class="icon me-5">
+                  <i class="pi pi-bookmark"></i>  
+                </div>
+              </div>
+              <div class="cardContent">
+                <div class="smallCards mt-3 p-2">
+                  <span class="me-3 rounded-3 p-1">Full Time</span>
+                  <span class="me-3 p-1 rounded-3">Remote</span>
+                  <span class="p-1 rounded-3">Salary Egypt/year</span>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+      </div> -->
+</div>
+

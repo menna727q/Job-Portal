@@ -1,0 +1,72 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="mt-3 p-5">
+  <span class=" p-2 me-2 cursor" routerLink="/homepage">
+    <i class="pi pi-arrow-left bg-white rounded-5 p-2"></i>
+   
+  </span>
+
+  <div class=" bg-white p-3 rounded-3 mt-2 ">
+    <div class="header d-flex justify-content-between">
+       <div class=" d-flex">
+        <div class="imag p-2">
+          <img [src]="logo" alt="">
+        </div>
+        <div class="name">
+          <h5>{{jobDetail.jobName}}
+              <i class="pi pi-bookmark"></i>
+          </h5>
+          <p>{{jobDetail.location}}</p>
+          
+          <div class="content">
+            <p>
+                <i class="pi pi-briefcase me-2"></i>
+                <span class="me-3 rounded-3 p-1">{{jobDetail.jobType}}</span>
+                <!-- <span class="me-3 p-1 rounded-3">Remote</span> -->
+            </p>
+            <p>
+                <i class="pi pi-dollar me-2"></i>
+                <span class="p-1 rounded-3">{{jobDetail.salary}}</span>
+            </p>
+        </div>
+      </div>
+
+       </div>
+        <div class="view">
+            <div class="dropdown" >
+              <button class="btn mb-2" (click)="showDialog()" >Apply</button>
+             
+             
+          </div>
+        </div>
+    </div>
+  
+</div>
+<div class="jobdes bg-white p-3 rounded-3 mt-3 ">
+  <h5>Job Description</h5>
+  <ul><li>{{jobDetail.job_description}}</li></ul>
+</div>
+<div class=" bg-white p-3 rounded-3 mt-3 ">
+  <h5>Qualifications</h5>
+  <ul><li>{{jobDetail.qualification}}</li></ul>
+</div>
+<p-dialog [style.width.px]="300" header="Easy Apply" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="true">
+  <p style="margin: 30px;">confirm your contact info</p>
+    <form>
+      <span class="p-float-label" style="margin: 30px;">
+        <input  pInputText id="email"  name="first" [(ngModel)]="formData.email"/>
+        <label for="email">email</label>
+    </span>
+    <span class="p-float-label" style="margin: 30px;">
+      <input pInputText id="phone"  name="second" [(ngModel)]="formData.phoneNumber"/>
+      <label for="phone">phone number</label>
+  </span>
+  <div style="margin: 30px;">
+  <p-fileUpload  mode="basic" chooseLabel="Upload CV" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" [maxFileSize]=1000000 (onUpload)="onUpload($event)"></p-fileUpload>
+</div>
+  <p-button class="submit" label="Apply" (click)="SendCV($event)"></p-button>  
+ <div *ngIf="this.SendCV">
+  <p-toast></p-toast>
+ </div>
+</form>
+</p-dialog>
+</div>

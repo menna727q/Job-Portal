@@ -1,0 +1,55 @@
+/* 
+ontent2{
+    height: 550px;
+}
+.texttt{
+    margin-top: 40px;
+}
+ */
+ .withp{
+    color: #5373E7;
+    font-family: 'Varien Font', sans-serif;
+}
+.btn{
+    background-color:   #5373E7;
+    color: white;
+}
+.btn:hover {
+    color: white;
+    background-color:  #5373E7;;
+    border-color: var(--bs-btn-hover-border-color);
+}
+.custom-button{
+    background-color: white;
+    border-color: #5373E7;
+    color: #5373E7;
+}
+.custom-button:hover{
+    background-color: white;
+    border-color: #5373E7;
+    color: #5373E7;
+}
+.fixedle{
+    /* height: 560px;  */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.contenttt {
+    flex-grow: 1;
+  }
+  .sign{
+    font-family: 'Varien Font', sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+.sign::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+   
+}

@@ -1,0 +1,36 @@
+
+
+<div class="container back d-flex justify-content-between align-items-center ">
+    <div class="col-md-6 mt-3 me-3 ">
+       <div class="content2 bg-white rounded-5  d-flex flex-column align-items-center justify-content-center ">
+        <div class="header p-4 me-auto">
+          <h3 class="text-uppercase  ">Wovac</h3>
+        </div>
+         <div class="texttt  ">
+           <h6 class="fw-bolder mt-5 text-center">Continue As</h6>
+           <div class="choose mt-5 d-flex justify-content-between">
+            <div class="image1 d-flex align-items-center justify-content-center flex-column" [routerLink]='["/user/signin"]'>
+                <img [src]="user" class="w-75 p-3 " alt="">
+                <p class="fw-bolder">user Account</p>
+            </div>
+            <div class="image1 d-flex align-items-center justify-content-center flex-column ms-5" [routerLink]='["/company/signin"]'>
+                <img [src]="company" class="w-75 p-3 " alt="">
+                <p class="fw-bolder">Company Account</p>
+
+            </div>
+           </div>
+
+       </div>
+       <div class="img">
+        <img [src]="frameOf" class="w-100 image " alt="">
+       </div>
+       </div>
+    </div>
+    <div class="col-md-6 p-3">
+       <div class="content">
+         <img [src]="imageSource" class="w-100" alt="">
+       </div>
+    </div>
+ </div>
+ 
+ 

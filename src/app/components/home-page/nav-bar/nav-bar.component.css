@@ -1,0 +1,54 @@
+/* Navbar styles */
+  .navbar {
+    background-color: white;
+    overflow: hidden;
+  }
+
+  /* Logo */
+  .navbar .logo {
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px;
+    line-height: 50px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /* Tabs */
+  .navbar .tabs {
+    float: left;
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .navbar .tabs a {
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+
+  /* .navbar .tabs a:hover {
+    background-color: #99c3f7;
+  } */
+
+  /* Logout Button */
+  .navbar .logout {
+    float: left;
+    line-height: 50px;
+    margin-left: 20px;
+  }
+
+  span{
+    margin-right: 30px;
+  }
+  /* .navbar .logout a {
+    color: red;
+    text-decoration: none;
+    padding: 0 15px;
+    margin-right: 20px;
+  } */
+
+  /* .navbar .logout a:hover {
+    background-color: #555;
+  } */

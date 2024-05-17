@@ -1,0 +1,57 @@
+<div class="container bg-white rounded-3">
+  <form [formGroup]="searchForm" class="form" >
+    <div class="label">
+      <h3>Search</h3>
+      <div class="buttons d-flex justify-content-center">
+        <div class="card  rounded-3 me-2">
+          <p-button label="Find Job" type="submit" (click)="onclick()"></p-button>
+        </div>
+        <div class="card gap-3 ">
+          <p-button label="Reset" [outlined]="true"></p-button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="first-row">
+        <input
+          #searchQuery
+          formControlName="jobName"
+          class="child"
+          pInputText
+          id="job-name"
+          placeholder="Job Name"
+          
+        />
+        <input
+          formControlName="minSalary"
+          class="child"
+          pInputText
+          id="min salary"
+          placeholder="Min Salary"
+        />
+      </div>
+      <div class="second-row">
+        <p-dropdown
+          formControlName="jobType"
+          class="child"
+          [options]="jobType"
+          optionLabel="jobtype"
+          [showClear]="true"
+          placeholder="Job Type"
+        ></p-dropdown>
+        <p-dropdown
+          formControlName="location"
+          class="child"
+          [options]="countries"
+          optionLabel="name"
+          [showClear]="true"
+          placeholder="Location"
+        ></p-dropdown>
+      </div>
+    </div>
+  </form>
+  <div>
+    <!-- {{searchForm.value| json}} -->
+  </div>
+</div>
+

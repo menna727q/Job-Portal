@@ -1,0 +1,24 @@
+.btn{
+    background-color: #E7F2FF;
+    color:#5373E7 ;
+}
+.btn:hover{
+    background-color: #E7F2FF;
+    color:#5373E7 ;
+}
+.email i,.degree ,.phone i,.file i,.parag{
+    color: #607381;
+}
+.email a ,.phone a,.file a{
+    color: blue;
+}
+.image{
+    width:15% ;
+}
+/* .custom-mat-select .mat-select-panel {
+    margin-top: 0px !important; /* Adjust the margin as needed 
+    width: 400px !important;
+  } */
+/* .icon{
+    right:0px;
+} */

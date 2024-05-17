@@ -1,0 +1,60 @@
+<!-- <app-navbar-company></app-navbar-company> -->
+
+<div class="container mt-4">
+    
+    <span class=" p-2 me-2 cursor" [routerLink]="['/posts']">
+        <i class="pi pi-arrow-left bg-white rounded-5 p-2"></i>
+    </span>
+    <div class="card1 bg-white p-3 rounded-3 mt-2">
+        <div class="header d-flex justify-content-between">
+            <div class="name">
+                <h5>{{jobDetail.jobName}}
+                    <span class="available fs-6 p-1 rounded-2">Available</span>
+                </h5>
+                <p>{{jobDetail.location}}</p>
+            </div>
+            <div class="view">
+                
+                <div class="dropdown" (click)="toggleDropdown($event)">
+                  <button class="btn mb-2" [routerLink]="['applicants']" >View Applicants</button>
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" aria-expanded="false">
+                      <i class="pi pi-ellipsis-v"></i>
+                  </a>
+                  <ul class="dropdown-menu" [class.show]="isDropdownOpen" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#" [routerLink]="['/edit-post/' , jobId]" style="color: blue;"><i class="pi pi-file-edit" ></i> Edit</a></li>
+                      <li><a class="dropdown-item" href="#" style="color: red;"(click)="openModal()"><i class="pi pi-trash" ></i> Delet</a></li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                <i class="pi pi-briefcase me-2"></i>
+                <span class="me-3 rounded-3 p-1">{{jobDetail.jobType}}</span>
+                <!-- <span class="me-3 p-1 rounded-3">Remote</span> -->
+            </p>
+            <p>
+                <i class="pi pi-dollar me-2"></i>
+                <span class="p-1 rounded-3">{{jobDetail.salary}}</span>
+            </p>
+        </div>
+    </div>
+   
+    <div class="card2 bg-white p-3 rounded-3 mt-3">
+        <h5>Job Description</h5>
+  <ul><li>{{jobDetail.job_description}}</li></ul>  
+  <!-- not work -->
+    </div>
+    <div class="card2 bg-white p-3 rounded-3 mt-3">
+        <h5>Qualifications</h5>
+        <ul>
+            <li>
+                {{jobDetail.qualification}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- <app-delete-confirmation-modal #deleteConfirmationModal (confirmDelete)="confirmDelete()"></app-delete-confirmation-modal> -->
+<app-delete-confirmation-modal *ngIf="isDeleteModalOpen" (closeModal)="closeModal()"></app-delete-confirmation-modal>

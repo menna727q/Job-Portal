@@ -1,0 +1,80 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="profile">
+    <div class="container bg-white mt-5 rounded-4 p-3">
+        <div class="acc p-3 d-flex justify-content-between">
+            <h6 >Account Details</h6>
+             <button class="btn" routerLink='/edit'> Edit</button>
+        </div>
+        <div class="header    p-2">
+            <span class="image  w-25">
+                <img [src]="userProfile.profilePicture?? userFrame" class="image2 rounded-circle" alt="">
+                
+            </span>
+            <span class="text">
+               <h5 class="fw-bolder">{{userProfile.firstName}} {{userProfile.lastName}}</h5>
+               <p class="fw-bold">{{userProfile.jobTitle}}</p>
+               <p class="degree">{{userProfile.education}}</p>
+            </span>
+        </div>
+        <div class="content">
+            <div class="email mb-2 ">
+                <i class="pi pi-envelope me-3"></i>
+                <span>{{userProfile.email}}</span>
+            </div>
+            <div class="phone mb-2 ">
+                <i class="pi pi-phone me-3"></i>
+                <span>{{userProfile.phoneNumber}}</span>
+            </div>
+            <div class="file mb-2 ">
+                <i class="pi pi-file-pdf me-3"></i>
+                <a [href]="userProfile.resume" target="_blank">{{ resumeFileName }}</a>
+            </div>
+            <div class="parag d-flex">
+                <i class="pi pi-align-left me-3"></i>
+               <p>{{userProfile.overview}} </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="container bg-white mt-5 mb-5 rounded-4 p-3">
+        <div class="acc p-3 d-flex justify-content-between">
+            <h6 >Job Preference</h6>
+            
+        </div>
+      <form >
+         <div class="row">
+            <div class="col-md-6 mb-2">
+               <input type="text" name="job" placeholder="{{userProfile.jobTitle}}" class="form-control" readonly>
+
+            </div>
+              <div class="col-md-6 mb-2">
+              <div class="content d-flex">
+                <select name="employmentType" id="employmentType" class="form-control position-relative " >
+                    <option value="" disabled selected>Select City</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alex">Alex</option>
+                    <option value="Giza">Giza</option>
+                    <option value="Minia">Minia</option>
+                  </select>
+                
+              </div>
+              </div>
+              <div class="col-md-6 ">
+                <select name="employmentType" id="employmentType" class="form-control">
+                    <option value="" disabled selected>Select Employment Type</option>
+                    <option value="fulltime-onsite">Full-Time Onsite</option>
+                    <option value="parttime-onsite">Part-Time Onsite</option>
+                    <option value="fulltime-online">Full-Time Online</option>
+                    <option value="parttime-online">Part-Time Online</option>
+                  </select>
+             </div>
+            <div class="col-md-6">
+                <input type="text" name="job" placeholder="1000" class="form-control mb-4" readonly>
+             </div>
+            
+        </div>    
+      </form>
+      
+
+    </div>
+</div>

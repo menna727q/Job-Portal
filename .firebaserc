@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "job-portal-491ab"
+  },
+  "targets": {
+    "job-portal-491ab": {
+      "hosting": {
+        "frontend": [
+          "job-portal-491ab"
+        ]
+      }
+    }
+  }
+}

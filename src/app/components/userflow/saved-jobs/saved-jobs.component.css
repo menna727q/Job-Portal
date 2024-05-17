@@ -1,0 +1,14 @@
+
+
+
+.smallCards span{
+    background-color: rgba(83, 115, 231,0.2);
+    color: #5373E7;
+}
+/* .icon{
+    color: black;
+} */
+.card{
+    border-color: white;
+    cursor: pointer;
+}

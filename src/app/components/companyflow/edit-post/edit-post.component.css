@@ -1,0 +1,19 @@
+.btn{
+    background-color: #5373E7;
+    color: white;
+}
+.btn:hover{
+    background-color: #5373E7;
+    color: white;
+}
+.width{
+    width: 15%;
+}
+.reset{
+    background-color: rgb(83, 115, 231,0.2);
+    color: #5373E7;
+}
+.reset:hover{
+    background-color: rgb(83, 115, 231,0.2);
+    color: #5373E7;
+}

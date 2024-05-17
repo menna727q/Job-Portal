@@ -1,0 +1,20 @@
+{
+  "routes": [
+    "/",
+    "/account",
+    "/applied",
+    "/company/edit",
+    "/company/profile",
+    "/company/signin",
+    "/company/signup",
+    "/edit",
+    "/homepage",
+    "/navappli",
+    "/newpost",
+    "/posts",
+    "/profile",
+    "/saved-jobs",
+    "/signup",
+    "/user/signin"
+  ]
+}

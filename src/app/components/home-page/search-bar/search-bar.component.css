@@ -1,0 +1,35 @@
+.container{
+    /* background-color: white; */
+    height: fit-content;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    padding: 30px;
+    margin: 70px auto;
+}
+.label{
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between; 
+    /* background-color: red; */
+}
+.first-row{
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between; /* This will distribute items evenly */  
+}
+.child{
+    /* background-color: aqua; */
+    width: 50%;
+    margin: 20px;
+}
+
+/* .buttons{
+   
+    display: inline-flex;
+} */
+.cards{
+    display: flex;
+    
+}

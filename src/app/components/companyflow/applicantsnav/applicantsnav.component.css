@@ -1,0 +1,19 @@
+.job{
+    color: #5373E7;
+}
+.card{
+    border-color: white;
+    cursor: pointer;
+}
+.cursor{
+    cursor: pointer;
+}
+
+.btn{
+    background-color: #5373E7;
+    color: white;
+}
+.btn:hover{
+    background-color: #5373E7;
+    color: white;
+}

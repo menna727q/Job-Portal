@@ -1,0 +1,67 @@
+
+@import 'primeicons/primeicons.css';
+
+.withp{
+    color: var(--main-color);
+    font-family: 'Varien Font', sans-serif;
+}
+h1{
+    font-family: 'Varien Font', sans-serif;
+    color: var(--main-color);
+    font-size: 60px;
+}
+
+.sign{
+    font-family: 'Varien Font', sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+.sign::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+   
+}
+
+
+  .texttt {
+    flex-grow: 1;
+  }
+  .fixed-height {
+    height: 575px;
+  }
+  
+  /* Rest of the CSS styles */
+.btn{
+    background-color:   #5373E7;
+    color: white;
+   
+}
+.btn:hover {
+    color: white;
+    background-color:  #5373E7;;
+    border-color: var(--bs-btn-hover-border-color);
+}
+.btn:disabled, fieldset:disabled .btn {
+    color: white;
+    pointer-events: none;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    opacity: var(--bs-btn-disabled-opacity);
+}
+form{
+    margin-right: 0px;
+}
+/* .image{
+    margin-right: 110px;
+    margin-top: -50px;
+} */
+
+.frameOf-image {
+    align-self: flex-end;
+    width: 250px;
+  }

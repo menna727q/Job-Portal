@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/primeicons/primeicons.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import './../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+@font-face {
+    font-family: 'Varien Font';
+    src: url('./assets/fonts/OTF/Varien-Italic.otf') format('otf'),
+         url('./assets/fonts/TTF/Varien.ttf') format('ttf'),
+         url('./assets/fonts/WOFF/Varien.woff') format('woff');
+    /* Add more formats if available */
+  }
+  :root{
+    --main-color:#5373E7;
+}
+body {
+    background-color: #E7F2FF !important;
+  }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
